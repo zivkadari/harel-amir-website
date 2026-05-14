@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Montserrat", "Poppins", "Satoshi", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Montserrat", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --header-height: 76px;
+  color-scheme: dark;
+  background: #050505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(201, 168, 103, 0.11), transparent 32rem),
+    radial-gradient(circle at 92% 48%, rgba(42, 73, 72, 0.16), transparent 30rem),
+    linear-gradient(180deg, #050505 0%, #0b0a09 42%, #050505 100%);
+  color: #f4efe5;
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body::selection {
+  background: rgba(201, 168, 103, 0.38);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+.snap-main {
+  min-height: 100svh;
+}
+
+.snap-section {
+  min-height: 100svh;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .snap-main {
+    height: 100svh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-section {
+    scroll-snap-stop: always;
+  }
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.section-shell {
+  width: min(100%, 1180px);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4.5vw, 3rem);
+}
+
+.eyebrow {
+  color: #c9a867;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.portfolio-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-section::before {
+  position: absolute;
+  inset-inline: 1rem;
+  top: 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(244, 239, 229, 0.15), transparent);
+}
+
+.luxury-panel {
+  position: relative;
+  border: 1px solid rgba(244, 239, 229, 0.11);
+  background:
+    linear-gradient(145deg, rgba(244, 239, 229, 0.055), rgba(255, 255, 255, 0.018)),
+    rgba(16, 16, 15, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  background: #050505;
+}
+
+.media-frame::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(115deg, transparent 0%, rgba(244, 239, 229, 0.09) 42%, transparent 58%),
+    radial-gradient(circle at 50% 0%, rgba(201, 168, 103, 0.16), transparent 50%);
+  opacity: 0;
+  transform: translateX(-28%);
+  transition: opacity 700ms ease, transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .media-frame::after,
+.group:active .media-frame::after {
+  opacity: 1;
+  transform: translateX(20%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.testimonial-preview {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid rgba(244, 239, 229, 0.12);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.03);
+  color: #f4efe5;
+  outline: none;
+  padding: 1.05rem 1rem;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.field:focus {
+  border-color: rgba(201, 168, 103, 0.72);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.field::placeholder {
+  color: rgba(244, 239, 229, 0.42);
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 103, 0.8), transparent);
+  height: 1px;
+}
+
+.scroll-pulse {
+  animation: scroll-pulse 1.55s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes scroll-pulse {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(320%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

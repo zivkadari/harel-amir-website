@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-label="International production placeholder">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050505"/><stop offset=".45" stop-color="#322116"/><stop offset="1" stop-color="#0b1110"/></linearGradient>
+    <radialGradient id="b" cx="50%" cy="30%" r="60%"><stop stop-color="#c9a867" stop-opacity=".48"/><stop offset=".42" stop-color="#30606c" stop-opacity=".22"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#a)"/>
+  <rect width="900" height="1125" fill="url(#b)"/>
+  <path d="M156 322h588l-52 388H208z" fill="#f4efe5" opacity=".08" stroke="#f4efe5" stroke-opacity=".18" stroke-width="4"/>
+  <path d="M270 708h360l88 417H182z" fill="#050505" opacity=".84"/>
+  <g fill="#f4efe5" opacity=".62"><circle cx="256" cy="350" r="12"/><circle cx="362" cy="350" r="12"/><circle cx="468" cy="350" r="12"/><circle cx="574" cy="350" r="12"/><circle cx="680" cy="350" r="12"/></g>
+  <path d="M182 840c126-63 247-72 364-18 76 35 139 46 190 34" stroke="#c9a867" stroke-opacity=".6" stroke-width="6" fill="none"/>
+</svg>

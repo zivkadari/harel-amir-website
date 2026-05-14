@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Dinner production placeholder">
+  <rect width="760" height="1014" fill="#080706"/>
+  <path d="M0 0h760v1014H0z" fill="#4e412d" opacity=".48"/>
+  <path d="M92 620h576v224H92z" fill="#050505" opacity=".78"/>
+  <g stroke="#f4efe5" stroke-opacity=".22" stroke-width="3"><path d="M130 650h500"/><path d="M170 712h420"/><path d="M220 774h320"/></g>
+  <circle cx="380" cy="272" r="154" fill="#c9a867" opacity=".22"/>
+</svg>

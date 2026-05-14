@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Sunset event placeholder">
+  <rect width="760" height="1014" fill="#050505"/>
+  <path d="M0 0h760v1014H0z" fill="#6f5c3b" opacity=".52"/>
+  <circle cx="380" cy="354" r="148" fill="#c9a867" opacity=".32"/>
+  <path d="M0 590c120-35 232-36 336-4 140 43 282 38 424-18v446H0z" fill="#102b2c" opacity=".5"/>
+  <path d="M0 718c160-64 298-58 414 18 96 63 210 75 346 40v238H0z" fill="#050505" opacity=".86"/>
+</svg>

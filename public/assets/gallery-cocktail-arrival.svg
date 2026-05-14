@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Cocktail arrival placeholder">
+  <rect width="760" height="1014" fill="#0b0a08"/>
+  <path d="M0 0h760v1014H0z" fill="#7b6744" opacity=".42"/>
+  <path d="M88 314h584v420H88z" fill="#f4efe5" opacity=".07" stroke="#f4efe5" stroke-opacity=".16" stroke-width="4"/>
+  <path d="M158 734h444v280H158z" fill="#050505" opacity=".86"/>
+  <circle cx="380" cy="280" r="118" fill="#c9a867" opacity=".24"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Stage lights placeholder">
+  <rect width="760" height="1014" fill="#050505"/>
+  <path d="M0 0h760v1014H0z" fill="#15393c" opacity=".45"/>
+  <path d="M105 190h550v20H105z" fill="#f4efe5" opacity=".18"/>
+  <g fill="#f4efe5" opacity=".58"><circle cx="170" cy="220" r="18"/><circle cx="275" cy="220" r="18"/><circle cx="380" cy="220" r="18"/><circle cx="485" cy="220" r="18"/><circle cx="590" cy="220" r="18"/></g>
+  <path d="M120 830c150-98 310-112 520-26v210H120z" fill="#050505" opacity=".86"/>
+  <path d="M260 210l-120 600M500 210l120 600" stroke="#c9a867" stroke-opacity=".25" stroke-width="22"/>
+</svg>

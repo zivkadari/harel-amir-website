@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-label="Beach events placeholder">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b1a16"/><stop offset=".5" stop-color="#7d6a45"/><stop offset="1" stop-color="#050505"/></linearGradient>
+    <radialGradient id="b" cx="46%" cy="36%" r="40%"><stop stop-color="#f4efe5" stop-opacity=".5"/><stop offset=".52" stop-color="#c9a867" stop-opacity=".16"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#a)"/>
+  <rect width="900" height="1125" fill="url(#b)"/>
+  <path d="M0 654c154-48 294-53 420-16 156 45 314 37 480-26v513H0z" fill="#102b2c" opacity=".5"/>
+  <path d="M0 738c190-62 348-48 502 28 126 61 260 78 398 42v317H0z" fill="#050505" opacity=".86"/>
+  <path d="M114 592h672" stroke="#f4efe5" stroke-opacity=".24" stroke-width="6"/>
+  <path d="M170 640h560" stroke="#c9a867" stroke-opacity=".55" stroke-width="4"/>
+</svg>

@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+dist
+.vercel
+*.log
+.env
+.env.local
+.env*.local
+.tools
+.image-source

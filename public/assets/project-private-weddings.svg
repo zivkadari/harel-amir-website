@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-label="Private weddings placeholder">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0908"/><stop offset=".52" stop-color="#786446"/><stop offset="1" stop-color="#11100d"/></linearGradient>
+    <radialGradient id="b" cx="50%" cy="42%" r="52%"><stop stop-color="#f4efe5" stop-opacity=".42"/><stop offset=".44" stop-color="#c9a867" stop-opacity=".18"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="900" height="1125" fill="url(#a)"/>
+  <rect width="900" height="1125" fill="url(#b)"/>
+  <path d="M90 682c180-96 332-100 482-28 80 39 155 55 238 43v428H90z" fill="#050505" opacity=".82"/>
+  <path d="M244 248h412v500H244z" fill="none" stroke="#f4efe5" stroke-opacity=".2" stroke-width="5"/>
+  <path d="M300 302h300v390H300z" fill="#f4efe5" opacity=".08"/>
+  <g stroke="#c9a867" stroke-width="5" opacity=".56"><path d="M190 748h520"/><path d="M226 796h448"/><path d="M270 846h360"/></g>
+</svg>

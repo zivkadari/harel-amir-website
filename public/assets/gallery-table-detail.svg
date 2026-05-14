@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Table detail placeholder">
+  <rect width="760" height="1014" fill="#100f0d"/>
+  <path d="M0 0h760v1014H0z" fill="#8d7245" opacity=".28"/>
+  <ellipse cx="380" cy="626" rx="284" ry="116" fill="#050505" opacity=".82"/>
+  <ellipse cx="380" cy="612" rx="230" ry="72" fill="#f4efe5" opacity=".08"/>
+  <g stroke="#c9a867" stroke-opacity=".5" stroke-width="5"><path d="M258 496h244"/><path d="M228 548h304"/><path d="M198 600h364"/></g>
+  <circle cx="380" cy="292" r="132" fill="#f4efe5" opacity=".12"/>
+</svg>

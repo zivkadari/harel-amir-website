@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1014" role="img" aria-label="Dance floor placeholder">
+  <rect width="760" height="1014" fill="#050505"/>
+  <path d="M0 0h760v1014H0z" fill="#27302b" opacity=".55"/>
+  <path d="M100 352h560v58H100z" fill="#c9a867" opacity=".24"/>
+  <path d="M0 660c164-79 286-75 410 4 95 61 205 75 350 24v326H0z" fill="#050505" opacity=".9"/>
+  <g fill="#f4efe5" opacity=".42"><circle cx="154" cy="610" r="16"/><circle cx="280" cy="562" r="20"/><circle cx="392" cy="590" r="14"/><circle cx="520" cy="550" r="20"/><circle cx="634" cy="620" r="16"/></g>
+</svg>
