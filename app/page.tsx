@@ -445,20 +445,20 @@ function Gallery({
             Private events, open-air productions, nightlife and Euforia moments.
           </p>
         </FadeIn>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[13vh]">
+        <div className="grid grid-cols-3 gap-1 sm:gap-2 md:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[13vh]">
           {galleryImages.map((image, index) => (
             <FadeIn key={image.src} delay={index * 0.018} className={image.className}>
               <button
                 type="button"
                 onClick={() => onOpen(image)}
-                className={`group media-frame ${image.aspect} block h-full min-h-56 w-full cursor-pointer bg-ink text-left lg:aspect-auto lg:min-h-0`}
+                className="group media-frame block aspect-square h-full w-full cursor-pointer bg-ink text-left md:aspect-[4/3] lg:aspect-auto"
                 aria-label={`Open ${image.alt}`}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 33vw"
                   className="object-cover saturate-[0.86] transition duration-1000 ease-out group-hover:scale-105 group-hover:saturate-100"
                 />
                 <div className="absolute inset-0 bg-ink/0 transition duration-700 group-hover:bg-ink/20" />
@@ -477,41 +477,41 @@ function ClientWords({
   onOpen: (testimonial: (typeof testimonials)[number]) => void;
 }) {
   return (
-    <section id="words" className="snap-section portfolio-section grid overflow-hidden bg-ink py-14 text-bone md:py-0">
+    <section id="words" className="snap-section portfolio-section testimonial-section grid overflow-hidden bg-bone py-14 text-ink md:py-0">
       <div className="section-shell grid min-h-screen content-center gap-8">
         <FadeIn className="md:flex md:items-end md:justify-between">
           <div>
-            <p className="eyebrow mb-5">Thank You Notes</p>
-            <h2 className="text-balance max-w-3xl font-display text-[2.65rem] font-black uppercase leading-[0.92] md:text-7xl">
+            <p className="mb-5 text-[0.66rem] font-bold uppercase tracking-[0.2em] text-brass">Thank You Notes</p>
+            <h2 className="text-balance max-w-3xl font-display text-[2.65rem] font-black uppercase leading-[0.92] text-ink md:text-7xl">
               Words from the events
             </h2>
           </div>
-          <p className="mt-5 max-w-sm text-base leading-7 text-mist md:mt-0">
+          <p className="mt-5 max-w-sm text-base leading-7 text-ink/62 md:mt-0">
             Real messages from couples and clients after the event.
           </p>
         </FadeIn>
-        <div className="testimonial-rail flex flex-row-reverse snap-x gap-3 overflow-x-auto pb-4 pt-2 md:gap-4" aria-label="Client thank-you notes">
+        <div className="testimonial-rail flex snap-x gap-3 overflow-x-auto pb-4 pt-2 md:gap-4" aria-label="Client thank-you notes" dir="rtl">
           {testimonials.map((testimonial, index) => (
             <FadeIn
               key={`${testimonial.names}-${testimonial.date}`}
               delay={(index % 3) * 0.04}
-              className="min-w-[76vw] snap-start sm:min-w-[22rem] md:min-w-[calc((100%_-_2rem)/3)] lg:min-w-[calc((100%_-_3rem)/4)]"
+              className="min-w-[74vw] snap-start sm:min-w-[20rem] md:min-w-[calc((100%_-_2rem)/3)] lg:min-w-[calc((100%_-_3rem)/4)]"
             >
-              <article className="luxury-panel testimonial-card flex min-h-[18rem] flex-col px-5 pb-5 pt-4 md:min-h-[19rem] md:px-6 md:pb-6">
-                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-gold/35 text-sm text-gold/90">
+              <article className="testimonial-card flex min-h-[16.5rem] flex-col border border-ink/18 bg-[#fbf7ee] px-5 pb-5 pt-4 shadow-[0_18px_48px_rgba(5,5,5,0.08)] md:min-h-[18rem] md:px-6 md:pb-6">
+                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-brass/35 text-sm text-brass">
                   ♥
                 </div>
                 <div className="text-center" dir="rtl">
-                  <h3 className="font-display text-[1.55rem] font-black leading-none text-bone">{testimonial.names}</h3>
-                  <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-gold">{testimonial.date}</p>
+                  <h3 className="font-display text-[1.45rem] font-black leading-none text-ink">{testimonial.names}</h3>
+                  <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brass">{testimonial.date}</p>
                 </div>
-                <p className="testimonial-preview mt-5 text-center text-[1.05rem] leading-8 text-bone/82 md:text-[1.08rem]" dir="rtl">
+                <p className="testimonial-preview mt-5 text-center text-[1rem] leading-7 text-ink/78 md:text-[1.04rem] md:leading-8" dir="rtl">
                   {testimonial.text}
                 </p>
                 <button
                   type="button"
                   onClick={() => onOpen(testimonial)}
-                  className="mt-auto pt-5 text-center text-sm font-bold tracking-[0.04em] text-gold transition hover:text-bone"
+                  className="mt-auto pt-5 text-center text-sm font-bold tracking-[0.04em] text-brass underline-offset-4 transition hover:text-ink hover:underline"
                 >
                   קרא עוד
                 </button>
@@ -632,24 +632,24 @@ function TestimonialModal({
   }
 
   return (
-    <div className="fixed inset-0 z-[80] overflow-y-auto bg-black/94 p-4" role="dialog" aria-modal="true">
-      <button
-        type="button"
-        onClick={onClose}
-        className="fixed right-4 top-4 z-10 border border-white/20 px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-gold hover:text-gold"
-      >
-        Close
-      </button>
-      <div className="mx-auto grid min-h-[100svh] max-w-2xl content-center py-16">
-        <article className="luxury-panel px-6 py-8 text-center md:px-10 md:py-10" dir="rtl">
-          <div className="mx-auto mb-5 flex h-9 w-9 items-center justify-center rounded-full border border-gold/35 text-sm text-gold">
+    <div className="fixed inset-0 z-[80] overflow-y-auto bg-black/82 px-4 py-5 md:p-6" role="dialog" aria-modal="true">
+      <div className="mx-auto flex min-h-[100svh] max-w-2xl items-center py-12">
+        <article className="relative w-full border border-ink/12 bg-bone px-6 py-8 text-center text-ink shadow-[0_30px_90px_rgba(0,0,0,0.45)] md:px-10 md:py-10" dir="rtl">
+          <button
+            type="button"
+            onClick={onClose}
+            className="absolute left-4 top-4 border border-ink/18 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-ink/72 transition hover:border-brass hover:text-brass"
+          >
+            Close
+          </button>
+          <div className="mx-auto mb-5 mt-7 flex h-9 w-9 items-center justify-center rounded-full border border-brass/35 text-sm text-brass md:mt-0">
             ♥
           </div>
-          <h3 className="font-display text-3xl font-black leading-none text-bone">{testimonial.names}</h3>
-          <p className="mt-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-gold">
+          <h3 className="font-display text-3xl font-black leading-none text-ink">{testimonial.names}</h3>
+          <p className="mt-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-brass">
             {testimonial.date}
           </p>
-          <p className="mt-8 text-right text-xl leading-9 text-bone/88">
+          <p className="mt-8 text-right text-lg leading-9 text-ink/86 md:text-xl">
             {testimonial.text}
           </p>
         </article>
