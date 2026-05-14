@@ -106,46 +106,25 @@ const galleryImages = [
 
 const testimonials = [
   {
-    names: "פז",
-    date: "27.10",
+    names: "דנה ושחר",
+    date: "24.07",
     text:
-      "הראל היה מטורף. איזה אירוע, הכל היה מתוקתק עד הפרט האחרון. האולם היה מהמם ולא יכולנו לבחור באולם יותר טוב לחתונה שלנו. היית מדהים והכלת את כל הלחץ שלי.",
-    image: "/images/testimonials/testimonial-paz-27-10.jpg"
+      "הראל, תודה על הכל. היה פשוט חלום. אנשים התלהבו בטירוף וסמכו עליך. היה לנו אירוע חלומי ומקבלים כל כך הרבה מחמאות.",
+    image: "/images/testimonials/testimonial-shachar-dana-24-07.jpg"
   },
   {
-    names: "מיכל",
-    date: "29.10",
+    names: "גאיה ואיתי",
+    date: "13.08",
     text:
-      "הראל התותח! תודה רבה על אירוע מדהים. הכל רץ ותיקתק כמו שצריך, כל דבר שהיינו צריכים עזרת לנו וייעצת לנו. הרגשנו שאנחנו בידיים הכי טובות שיש.",
-    image: "/images/testimonials/testimonial-michal-29-10.jpg"
+      "הראל, איזה כיף היה לנו. תודה ענקית על כל ההשקעה שלך ושל כל הצוות. היה מטורף ומשמח שהיית מנהל האירוע שלנו.",
+    image: "/images/testimonials/testimonial-gaia-13-08.jpg"
   },
   {
-    names: "שקד",
-    date: "19.11",
+    names: "צליל ודניאל",
+    date: "09.07",
     text:
-      "אתה בעצמך! תודה רבה על שהיית איתנו, שדאגת לנו, שזרמת איתנו והיית מלך. כל דבר שביקשנו או רצינו היה איתנו, עם חיוך ואווירה טובה.",
-    image: "/images/testimonials/testimonial-shaked-19-11.jpg"
-  },
-  {
-    names: "עמית",
-    date: "27.11",
-    text:
-      "הראל כפרה עליך! אין לי מילים. שמחה שידעת איפה להקשיב לנו ואיפה לעשות את השיקול דעת שלך. תיקתקת את החתונה הזו ברמה הכי מקצועית שיש.",
-    image: "/images/testimonials/testimonial-amit-27-11.jpg"
-  },
-  {
-    names: "ספיר ועמית",
-    date: "30.07",
-    text:
-      "הראל, תודה על הכל. אין עלייך ואני מאושרת שקיבלנו אותך. הליווי לאורך הדרך היה מושלם והאירוע היה עטוף ומדויק.",
-    image: "/images/testimonials/testimonial-sapir-amit-30-07.jpg"
-  },
-  {
-    names: "אור",
-    date: "14.12",
-    text:
-      "אחרי שקצת התאוששנו, רצינו להגיד תודה ענקית. האירוע תקתק, האורחים לא היו בלחצים והכל היה מושלם. תודה על הניהול המושלם ועל המעבר מעל ומעבר.",
-    image: "/images/testimonials/testimonial-or-14-12.jpg"
+      "הראל, כמה דאגת לנו לכל פרט ופרט מהשיגעונות שלי. כל כך הרגעת אותי והיית שם לכל דבר. תודה תודה תודה.",
+    image: "/images/testimonials/testimonial-tzlil-09-07.jpg"
   },
   {
     names: "רחלי ורותם",
@@ -155,32 +134,53 @@ const testimonials = [
     image: "/images/testimonials/testimonial-racheli-rotem-17-12.jpg"
   },
   {
-    names: "צליל",
-    date: "09.07",
+    names: "אן וגור",
+    date: "14.12",
     text:
-      "הראל, כמה דאגת לנו לכל פרט ופרט מהשיגעונות שלי. כל כך הרגעת אותי והיית שם לכל דבר. תודה תודה תודה.",
-    image: "/images/testimonials/testimonial-tzlil-09-07.jpg"
+      "אחרי שקצת התאוששנו, רצינו להגיד תודה ענקית. האירוע תקתק, האורחים לא היו בלחצים והכל היה מושלם. תודה על הניהול המושלם ועל המעבר מעל ומעבר.",
+    image: "/images/testimonials/testimonial-or-14-12.jpg"
   },
   {
-    names: "שחר ודנה",
-    date: "24.07",
-    text:
-      "הראל, תודה על הכל. היה פשוט חלום. אנשים התלהבו בטירוף וסמכו עליך. היה לנו אירוע חלומי ומקבלים כל כך הרבה מחמאות.",
-    image: "/images/testimonials/testimonial-shachar-dana-24-07.jpg"
-  },
-  {
-    names: "גאיה",
-    date: "13.08",
-    text:
-      "הראל, איזה כיף היה לנו. תודה ענקית על כל ההשקעה שלך ושל כל הצוות. היה מטורף ומשמח שהיית מנהל האירוע שלנו.",
-    image: "/images/testimonials/testimonial-gaia-13-08.jpg"
-  },
-  {
-    names: "עדי",
+    names: "עדי ומשה",
     date: "09.12",
     text:
       "הראלוש, תודה רבה. הכל התנהל מעולה והיה מטורף. נהננו בטירוף וקיבלנו הרבה מחמאות. אין עליך.",
     image: "/images/testimonials/testimonial-adi-09-12.jpg"
+  },
+  {
+    names: "עמית ועידו",
+    date: "26.11",
+    text:
+      "הראל כפרה עליך! אין לי מילים. שמחה שידעת איפה להקשיב לנו ואיפה לעשות את השיקול דעת שלך. תיקתקת את החתונה הזו ברמה הכי מקצועית שיש.",
+    image: "/images/testimonials/testimonial-amit-27-11.jpg"
+  },
+  {
+    names: "שקד ואלעד",
+    date: "19.11",
+    text:
+      "אתה בעצמך! תודה רבה על שהיית איתנו, שדאגת לנו, שזרמת איתנו והיית מלך. כל דבר שביקשנו או רצינו היה איתנו, עם חיוך ואווירה טובה.",
+    image: "/images/testimonials/testimonial-shaked-19-11.jpg"
+  },
+  {
+    names: "מיכל ורועי",
+    date: "29.10",
+    text:
+      "הראל התותח! תודה רבה על אירוע מדהים. הכל רץ ותיקתק כמו שצריך, כל דבר שהיינו צריכים עזרת לנו וייעצת לנו. הרגשנו שאנחנו בידיים הכי טובות שיש.",
+    image: "/images/testimonials/testimonial-michal-29-10.jpg"
+  },
+  {
+    names: "פז ועידן",
+    date: "27.10",
+    text:
+      "הראל היה מטורף. איזה אירוע, הכל היה מתוקתק עד הפרט האחרון. האולם היה מהמם ולא יכולנו לבחור באולם יותר טוב לחתונה שלנו. היית מדהים והכלת את כל הלחץ שלי.",
+    image: "/images/testimonials/testimonial-paz-27-10.jpg"
+  },
+  {
+    names: "ספיר ועמית",
+    date: "30.07",
+    text:
+      "הראל, תודה על הכל. אין עלייך ואני מאושרת שקיבלנו אותך. הליווי לאורך הדרך היה מושלם והאירוע היה עטוף ומדויק.",
+    image: "/images/testimonials/testimonial-sapir-amit-30-07.jpg"
   }
   // TODO: Edit final names, dates and full Hebrew text after Harel approves the client wording.
 ];
@@ -478,7 +478,7 @@ function ClientWords({
 }) {
   return (
     <section id="words" className="snap-section portfolio-section grid overflow-hidden bg-ink py-14 text-bone md:py-0">
-      <div className="section-shell grid min-h-screen content-center gap-9">
+      <div className="section-shell grid min-h-screen content-center gap-8">
         <FadeIn className="md:flex md:items-end md:justify-between">
           <div>
             <p className="eyebrow mb-5">Thank You Notes</p>
@@ -490,30 +490,30 @@ function ClientWords({
             Real messages from couples and clients after the event.
           </p>
         </FadeIn>
-        <div className="flex snap-x gap-4 overflow-x-auto pb-4 md:gap-5">
+        <div className="testimonial-rail flex flex-row-reverse snap-x gap-3 overflow-x-auto pb-4 pt-2 md:gap-4" aria-label="Client thank-you notes">
           {testimonials.map((testimonial, index) => (
             <FadeIn
               key={`${testimonial.names}-${testimonial.date}`}
               delay={(index % 3) * 0.04}
-              className="min-w-[82vw] snap-center md:min-w-[calc((100%_-_2.5rem)/3)]"
+              className="min-w-[76vw] snap-start sm:min-w-[22rem] md:min-w-[calc((100%_-_2rem)/3)] lg:min-w-[calc((100%_-_3rem)/4)]"
             >
-              <article className="luxury-panel flex min-h-[21rem] flex-col p-6 md:p-7">
-                <div className="mx-auto mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 text-lg text-gold">
+              <article className="luxury-panel testimonial-card flex min-h-[18rem] flex-col px-5 pb-5 pt-4 md:min-h-[19rem] md:px-6 md:pb-6">
+                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-gold/35 text-sm text-gold/90">
                   ♥
                 </div>
-                <div className="text-center">
-                  <h3 className="font-display text-2xl font-black text-bone">{testimonial.names}</h3>
-                  <p className="mt-2 text-xs font-bold uppercase tracking-[0.18em] text-gold">{testimonial.date}</p>
+                <div className="text-center" dir="rtl">
+                  <h3 className="font-display text-[1.55rem] font-black leading-none text-bone">{testimonial.names}</h3>
+                  <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-gold">{testimonial.date}</p>
                 </div>
-                <p className="testimonial-preview mt-6 text-right text-lg leading-8 text-bone/84" dir="rtl">
+                <p className="testimonial-preview mt-5 text-center text-[1.05rem] leading-8 text-bone/82 md:text-[1.08rem]" dir="rtl">
                   {testimonial.text}
                 </p>
                 <button
                   type="button"
                   onClick={() => onOpen(testimonial)}
-                  className="mt-auto pt-7 text-sm font-bold uppercase tracking-[0.16em] text-gold transition hover:text-bone"
+                  className="mt-auto pt-5 text-center text-sm font-bold tracking-[0.04em] text-gold transition hover:text-bone"
                 >
-                  Read more
+                  קרא עוד
                 </button>
               </article>
             </FadeIn>
@@ -640,29 +640,19 @@ function TestimonialModal({
       >
         Close
       </button>
-      <div className="mx-auto grid min-h-[100svh] max-w-5xl content-center gap-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-        <article className="luxury-panel p-7 md:p-9">
-          <div className="mb-5 text-center text-3xl text-gold">♥</div>
-          <h3 className="text-center font-display text-3xl font-black text-bone">{testimonial.names}</h3>
+      <div className="mx-auto grid min-h-[100svh] max-w-2xl content-center py-16">
+        <article className="luxury-panel px-6 py-8 text-center md:px-10 md:py-10" dir="rtl">
+          <div className="mx-auto mb-5 flex h-9 w-9 items-center justify-center rounded-full border border-gold/35 text-sm text-gold">
+            ♥
+          </div>
+          <h3 className="font-display text-3xl font-black leading-none text-bone">{testimonial.names}</h3>
           <p className="mt-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-gold">
             {testimonial.date}
           </p>
-          <p className="mt-7 text-right text-xl leading-9 text-bone/88" dir="rtl">
+          <p className="mt-8 text-right text-xl leading-9 text-bone/88">
             {testimonial.text}
           </p>
-          <p className="mt-6 text-xs leading-6 text-mist">
-            TODO: Edit names, dates and full text here after approving the final client message.
-          </p>
         </article>
-        <div className="relative min-h-[60svh] overflow-hidden rounded-[1rem] border border-white/10 bg-white">
-          <Image
-            src={testimonial.image}
-            alt={`Original thank-you message from ${testimonial.names}`}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-contain"
-          />
-        </div>
       </div>
     </div>
   );

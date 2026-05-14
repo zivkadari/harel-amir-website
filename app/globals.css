@@ -154,11 +154,33 @@ img {
   text-wrap: balance;
 }
 
+.testimonial-rail {
+  scroll-padding-inline: 1rem;
+  scrollbar-color: rgba(201, 168, 103, 0.55) rgba(244, 239, 229, 0.08);
+  scrollbar-width: thin;
+}
+
+.testimonial-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.testimonial-rail::-webkit-scrollbar-track {
+  background: rgba(244, 239, 229, 0.08);
+}
+
+.testimonial-rail::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 103, 0.55);
+}
+
+.testimonial-card {
+  direction: rtl;
+}
+
 .testimonial-preview {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
 }
 
 .field {
