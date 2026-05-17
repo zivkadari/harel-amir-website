@@ -49,6 +49,12 @@ const galleryImages = [
     className: "md:row-span-2"
   },
   {
+    src: "/images/harel-network.jpg",
+    alt: "Harel Amir with event guests",
+    aspect: "aspect-[4/5]",
+    className: ""
+  },
+  {
     src: "/images/private-event-setup.jpg",
     alt: "Private event setup with tables and sound",
     aspect: "aspect-[4/3]",
@@ -67,28 +73,16 @@ const galleryImages = [
     className: ""
   },
   {
-    src: "/images/euforia-crowd-front.jpg",
-    alt: "Euforia crowd energy",
-    aspect: "aspect-[4/5]",
-    className: "md:row-span-2"
-  },
-  {
     src: "/images/euforia-beach-day.jpg",
     alt: "Beach production during the day",
     aspect: "aspect-[4/3]",
     className: ""
   },
   {
-    src: "/images/euforia-crowd-day.jpg",
-    alt: "Daytime crowd at international production",
-    aspect: "aspect-[4/3]",
-    className: ""
-  },
-  {
-    src: "/images/euforia-crowd-night.jpg",
-    alt: "Night crowd at electronic music event",
-    aspect: "aspect-[4/3]",
-    className: ""
+    src: "/images/euforia-stage-canopy-night.jpg",
+    alt: "Night stage canopy and lighting production",
+    aspect: "aspect-[16/10]",
+    className: "md:col-span-2"
   },
   {
     src: "/images/euforia-lights.jpg",
@@ -101,6 +95,12 @@ const galleryImages = [
     alt: "DJ and crowd at electronic music event",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2"
+  },
+  {
+    src: "/images/euforia-crowd-front.jpg",
+    alt: "Euforia crowd energy",
+    aspect: "aspect-[4/5]",
+    className: "md:row-span-2"
   }
 ];
 
@@ -108,10 +108,9 @@ const testimonials = [
   {
     names: "דנה ושחר",
     date: "24.07",
-    text: `@Harel Amir הראל יא מלך! היה פשוט חלום אתמול. תודה על הכל!! אני יודע שאני לא חתן קל👻
+    text: `הראל יא מלך! היה פשוט חלום אתמול. תודה על הכל!! אני יודע שאני לא חתן קל👻
 היה מדהים ואנשים התלהבו בטירוף.
 סחתיין עליך!!
-
 אני מצטרפת!!!!! אנחנו עוד מתאוששים כאן ומנסים לארגן את המילים, אבל רצינו להגיד תודה מכל הלב, היה לנו אירוע באמת חלומי ומקבלים כל כך הרבה מחמאות. תודה על הכל ❤️🙏`,
     image: "/images/testimonials/testimonial-shachar-dana-24-07.jpg"
   },
@@ -121,7 +120,6 @@ const testimonials = [
     text: `וואוו ואו הראל איזה כיף היה לנו !!!!
 אנחנו עוד מתאוששים
 תודה ענקית על כל ההשקעה שלך ושל כל הצוות , עפנו גם על הברמנים
-
 היה מטורף וממש שמחים שאתה היית המנהל אירוע שלנו 🪬❤️`,
     image: "/images/testimonials/testimonial-gaia-13-08.jpg"
   },
@@ -130,22 +128,18 @@ const testimonials = [
     date: "09.07",
     text: `היה לנו מדהים אחי
 צריך רגע לעכל את מה שחווינו
-
 אין לנו מילים כרגע חוץ מי תודה ענקית
 מעומק הלב על הכל הכל
-
 הראלללללללללללל מה זה מה זהההה
 איך היה לי כייף אתמול כמה דאגת לנו
 לכל פרט ופרט מההשיגעונות שלי
 זיכרווווון בר , כל כך הרגעת אותי והיית שם
 לכל דבר תודה תודה תודה תודה ועוד
 אלף תודה !!!!
-
 חחחח ברורררר
 איזה כייף היית מושלם ברמות !!! אתה
 פשוט מללללללך מלךךךךך
 👑👑👑👑👑👑
-
 ושוב באלי להגיד לך שאתה מלךךךך ותודה
 על הכל 💗💗💗💗`,
     image: "/images/testimonials/testimonial-tzlil-09-07.jpg"
@@ -156,7 +150,6 @@ const testimonials = [
     text: `הראל היקר!!
 היה מדהים תודה רבה ❤️❤️
 אין עליך , היה קצב מושלם
-
 מצטרף, היית שם בשבילי שהייתי צריך
 אותך. תודה. יש לך חלק גדול בהצלחה
 של האירוע. אוהבים ❤️❤️`,
@@ -248,7 +241,6 @@ const testimonials = [
 ❤️
 באמת תודה תודה תודה על אירוע
 מושלם 🙏🏻🙏🏻🙏🏻
-
 היה טירוף שיחקת אותה, הייתה מעטפת
 מטורפת ולא התעסקנו בכלום חוץ
 מלהינות`,
@@ -676,7 +668,12 @@ function GalleryLightbox({
   }
 
   return (
-    <div className="fixed inset-0 z-[80] grid place-items-center bg-black/92 p-4" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-[80] grid place-items-center bg-black/92 p-4"
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
+    >
       <button
         type="button"
         onClick={onClose}
@@ -684,7 +681,7 @@ function GalleryLightbox({
       >
         Close
       </button>
-      <div className="relative h-[82svh] w-full max-w-6xl overflow-hidden">
+      <div className="relative h-[82svh] w-full max-w-6xl overflow-hidden" onClick={(event) => event.stopPropagation()}>
         <Image src={image.src} alt={image.alt} fill sizes="100vw" className="object-contain" />
       </div>
     </div>
