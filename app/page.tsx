@@ -49,8 +49,14 @@ const galleryImages = [
     className: "md:row-span-2"
   },
   {
-    src: "/images/harel-network.jpg",
-    alt: "Harel Amir with event guests",
+    src: "/images/harel-with-couple-wedding-hall.jpg",
+    alt: "Harel Amir with a wedding couple",
+    aspect: "aspect-[4/5]",
+    className: ""
+  },
+  {
+    src: "/images/harel-couple-venue-night.jpg",
+    alt: "Harel Amir with a couple at a night venue",
     aspect: "aspect-[4/5]",
     className: ""
   },
@@ -61,10 +67,34 @@ const galleryImages = [
     className: ""
   },
   {
+    src: "/images/wedding-floral-canopy.jpg",
+    alt: "White floral wedding canopy",
+    aspect: "aspect-[4/3]",
+    className: ""
+  },
+  {
+    src: "/images/harel-couple-white-venue.jpg",
+    alt: "Harel Amir with a wedding couple inside the venue",
+    aspect: "aspect-[4/5]",
+    className: ""
+  },
+  {
     src: "/images/euforia-stage-wide.jpg",
     alt: "Wide Euforia stage production",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2"
+  },
+  {
+    src: "/images/harel-beach-sign.jpg",
+    alt: "Harel Amir at a beach event entrance",
+    aspect: "aspect-[4/5]",
+    className: ""
+  },
+  {
+    src: "/images/harel-party-couple.jpg",
+    alt: "Harel Amir with a couple during the party",
+    aspect: "aspect-[4/5]",
+    className: ""
   },
   {
     src: "/images/euforia-beach-aerial.jpg",
@@ -95,6 +125,12 @@ const galleryImages = [
     alt: "DJ and crowd at electronic music event",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2"
+  },
+  {
+    src: "/images/harel-network.jpg",
+    alt: "Harel Amir with event guests",
+    aspect: "aspect-[4/5]",
+    className: ""
   },
   {
     src: "/images/euforia-crowd-front.jpg",
