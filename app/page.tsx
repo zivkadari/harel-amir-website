@@ -517,7 +517,7 @@ function Hero() {
             className="mt-8 flex flex-col items-center gap-3 text-center font-display text-[0.92rem] font-black uppercase tracking-[0.12em] text-white transition hover:text-gold md:mt-9 md:text-[1.45rem]"
           >
             <span>Scroll Down</span>
-            <span className="relative h-12 w-px overflow-hidden bg-white/35 md:h-16">
+            <span className="scroll-cue-line relative h-12 w-px bg-white/35 md:h-16">
               <span className="scroll-pulse absolute left-0 top-0 h-5 w-px bg-white" />
             </span>
           </a>
@@ -576,11 +576,11 @@ function About() {
           <div className="relative mx-auto w-full max-w-[25rem] overflow-hidden rounded-[1.15rem] border border-white/10 bg-white/[0.035] shadow-glow md:max-w-none">
             <div className="relative aspect-[4/5] md:h-[78svh] md:aspect-auto">
               <Image
-                src="/images/harel-portrait-main.jpg"
-                alt="Harel Amir portrait"
+                src="/images/harel-about-new.jpg"
+                alt="Harel Amir at an event"
                 fill
                 sizes="(min-width: 768px) 44vw, 100vw"
-                className="object-cover object-[38%_45%] saturate-[0.9]"
+                className="object-cover object-[48%_42%] saturate-[0.9]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/58 via-transparent to-transparent" />
             </div>

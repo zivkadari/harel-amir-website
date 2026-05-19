@@ -244,6 +244,19 @@ img {
   animation: scroll-pulse 1.55s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 
+.scroll-cue-line::after {
+  position: absolute;
+  left: 50%;
+  bottom: -0.28rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: center;
+}
+
 @keyframes scroll-pulse {
   0% {
     opacity: 0;
