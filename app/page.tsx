@@ -380,12 +380,16 @@ function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-ink via-ink/72 to-transparent">
       <div className="section-shell flex h-[var(--header-height)] items-center justify-between md:h-28">
-        <a href="#hero" className="group min-w-0 text-right" aria-label="דף הבית של Harel Amir">
-          <span className="block font-display text-[1.5rem] font-black uppercase leading-none tracking-[0.18em] text-white md:text-[2.35rem] lg:text-[2.75rem]" dir="ltr">
-            Harel Amir
-          </span>
-          <span className="mt-2 block text-[0.78rem] font-bold tracking-normal text-bone/78 md:text-[0.96rem]">
-            הפקה וניהול אירועים
+        <a href="#hero" className="group min-w-0" aria-label="דף הבית של Harel Amir">
+          <span className="relative block h-12 w-44 overflow-hidden md:h-16 md:w-64 lg:w-72" dir="ltr">
+            <Image
+              src="/images/harel-amir-logo.jpg"
+              alt="Harel Amir Event Management & Production"
+              fill
+              priority
+              sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, 11rem"
+              className="object-cover object-center"
+            />
           </span>
         </a>
 
