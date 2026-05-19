@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-display: "Montserrat", "Poppins", "Satoshi", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Montserrat", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Heebo", "Assistant", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Assistant", "Heebo", "Helvetica Neue", Arial, sans-serif;
   --header-height: 76px;
   color-scheme: dark;
   background: #050505;
@@ -108,8 +108,7 @@ img {
   color: #c9a867;
   font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .portfolio-section {

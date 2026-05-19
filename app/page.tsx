@@ -15,30 +15,30 @@ const euforiaInstagramUrl = "https://www.instagram.com/euforia_offical/";
 const facebookUrl = "https://www.facebook.com/harel.amir.9";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Words", href: "#words" },
-  { label: "Contact", href: "#contact" }
+  { label: "אודות", href: "#about" },
+  { label: "גלריה", href: "#gallery" },
+  { label: "תודות", href: "#words" },
+  { label: "יצירת קשר", href: "#contact" }
 ];
 
 const heroNavItems = [
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Words", href: "#words" },
-  { label: "Contact", href: "#contact" }
+  { label: "אודות", href: "#about" },
+  { label: "גלריה", href: "#gallery" },
+  { label: "תודות", href: "#words" },
+  { label: "יצירת קשר", href: "#contact" }
 ];
 
 const socialLinks = [
-  { label: "Instagram Harel", href: instagramUrl },
-  { label: "Euforia", href: euforiaInstagramUrl },
-  { label: "Facebook", href: facebookUrl }
+  { label: "אינסטגרם הראל", href: instagramUrl },
+  { label: "אופוריה", href: euforiaInstagramUrl },
+  { label: "פייסבוק", href: facebookUrl }
 ];
 
 const heroSocialLinks = [
-  { label: "Facebook", href: facebookUrl, Icon: FaFacebookF },
-  { label: "Euforia Instagram", href: euforiaInstagramUrl, Icon: FaInstagram },
-  { label: "WhatsApp", href: whatsappUrl, Icon: FaWhatsapp },
-  { label: "Harel Instagram", href: instagramUrl, Icon: FaInstagram },
+  { label: "פייסבוק", href: facebookUrl, Icon: FaFacebookF },
+  { label: "אינסטגרם אופוריה", href: euforiaInstagramUrl, Icon: FaInstagram },
+  { label: "וואטסאפ", href: whatsappUrl, Icon: FaWhatsapp },
+  { label: "אינסטגרם הראל", href: instagramUrl, Icon: FaInstagram },
 ];
 
 type GalleryImageType = "people" | "production";
@@ -57,112 +57,112 @@ const GALLERY_PAIR_COUNT = GALLERY_DISPLAY_COUNT / 2;
 const galleryImages: GalleryImage[] = [
   {
     src: "/images/harel-wedding.jpg",
-    alt: "Harel Amir with wedding clients",
+    alt: "הראל אמיר עם לקוחות בחתונה",
     aspect: "aspect-[4/5]",
     className: "md:row-span-2",
     type: "people"
   },
   {
     src: "/images/harel-with-couple-wedding-hall.jpg",
-    alt: "Harel Amir with a wedding couple",
+    alt: "הראל אמיר עם זוג ביום החתונה",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/harel-couple-venue-night.jpg",
-    alt: "Harel Amir with a couple at a night venue",
+    alt: "הראל אמיר עם זוג במתחם אירועים לילי",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/private-event-setup.jpg",
-    alt: "Private event setup with tables and sound",
+    alt: "עיצוב אירוע פרטי עם שולחנות וסאונד",
     aspect: "aspect-[4/3]",
     className: "",
     type: "production"
   },
   {
     src: "/images/wedding-floral-canopy.jpg",
-    alt: "White floral wedding canopy",
+    alt: "חופת חתונה לבנה עם פרחים",
     aspect: "aspect-[4/3]",
     className: "",
     type: "production"
   },
   {
     src: "/images/harel-couple-white-venue.jpg",
-    alt: "Harel Amir with a wedding couple inside the venue",
+    alt: "הראל אמיר עם זוג בתוך מתחם האירוע",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/euforia-stage-wide.jpg",
-    alt: "Wide Euforia stage production",
+    alt: "הפקת במה רחבה של אופוריה",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2",
     type: "production"
   },
   {
     src: "/images/harel-beach-sign.jpg",
-    alt: "Harel Amir at a beach event entrance",
+    alt: "הראל אמיר בכניסה לאירוע חוף",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/harel-party-couple.jpg",
-    alt: "Harel Amir with a couple during the party",
+    alt: "הראל אמיר עם זוג במהלך המסיבה",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/euforia-beach-aerial.jpg",
-    alt: "Aerial beach production",
+    alt: "הפקת חוף ממבט אווירי",
     aspect: "aspect-[4/3]",
     className: "",
     type: "production"
   },
   {
     src: "/images/euforia-beach-day.jpg",
-    alt: "Beach production during the day",
+    alt: "הפקת חוף בשעות היום",
     aspect: "aspect-[4/3]",
     className: "",
     type: "production"
   },
   {
     src: "/images/euforia-stage-canopy-night.jpg",
-    alt: "Night stage canopy and lighting production",
+    alt: "במה לילית עם קירוי ותאורה",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2",
     type: "production"
   },
   {
     src: "/images/euforia-lights.jpg",
-    alt: "Stage lights at event production",
+    alt: "תאורת במה בהפקת אירוע",
     aspect: "aspect-[4/3]",
     className: "",
     type: "production"
   },
   {
     src: "/images/euforia-dj-crowd.jpg",
-    alt: "DJ and crowd at electronic music event",
+    alt: "די-ג'יי וקהל באירוע מוזיקה אלקטרונית",
     aspect: "aspect-[16/10]",
     className: "md:col-span-2",
     type: "production"
   },
   {
     src: "/images/harel-network.jpg",
-    alt: "Harel Amir with event guests",
+    alt: "הראל אמיר עם אורחי אירוע",
     aspect: "aspect-[4/5]",
     className: "",
     type: "people"
   },
   {
     src: "/images/euforia-crowd-front.jpg",
-    alt: "Euforia crowd energy",
+    alt: "אנרגיית קהל באופוריה",
     aspect: "aspect-[4/5]",
     className: "md:row-span-2",
     type: "production"
@@ -380,21 +380,21 @@ function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-ink via-ink/72 to-transparent">
       <div className="section-shell flex h-[var(--header-height)] items-center justify-between md:h-28">
-        <a href="#hero" className="group min-w-0" aria-label="Harel Amir home">
-          <span className="block font-display text-[1.5rem] font-black uppercase leading-none tracking-[0.18em] text-white md:text-[2.35rem] lg:text-[2.75rem]">
+        <a href="#hero" className="group min-w-0 text-right" aria-label="דף הבית של Harel Amir">
+          <span className="block font-display text-[1.5rem] font-black uppercase leading-none tracking-[0.18em] text-white md:text-[2.35rem] lg:text-[2.75rem]" dir="ltr">
             Harel Amir
           </span>
-          <span className="mt-2 block text-[0.58rem] font-bold uppercase tracking-[0.32em] text-bone/78 md:text-[0.72rem] md:tracking-[0.38em]">
-            Event Production & Management
+          <span className="mt-2 block text-[0.78rem] font-bold tracking-normal text-bone/78 md:text-[0.96rem]">
+            הפקה וניהול אירועים
           </span>
         </a>
 
-        <nav className="hidden items-center gap-12 lg:gap-20 md:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-12 lg:gap-20 md:flex" aria-label="ניווט ראשי">
           {heroNavItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="font-display text-[1.5rem] font-black uppercase tracking-[0.08em] text-white transition hover:text-gold lg:text-[1.95rem]"
+              className="font-display text-[1.5rem] font-black tracking-normal text-white transition hover:text-gold lg:text-[1.95rem]"
             >
               {item.label}
             </a>
@@ -403,7 +403,7 @@ function Header() {
 
         <details className="group md:hidden">
           <summary className="relative z-50 flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-white/12 bg-white/[0.03] text-bone backdrop-blur [&::-webkit-details-marker]:hidden">
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only">פתח תפריט</span>
             <span className="relative h-4 w-5">
               <span className="absolute left-0 top-0 h-px w-5 bg-bone transition group-open:translate-y-2 group-open:rotate-45" />
               <span className="absolute left-0 top-2 h-px w-5 bg-bone transition group-open:opacity-0" />
@@ -414,7 +414,7 @@ function Header() {
           <div
             className="invisible absolute left-0 top-0 z-40 h-[100svh] w-screen translate-x-full bg-ink px-5 pb-8 pt-28 opacity-0 transition duration-300 group-open:visible group-open:translate-x-0 group-open:opacity-100"
           >
-            <nav className="flex h-full flex-col justify-between" aria-label="Mobile navigation">
+            <nav className="flex h-full flex-col justify-between" aria-label="ניווט מובייל">
               <div>
                 <div className="space-y-5">
                   {navItems.map((item) => (
@@ -422,13 +422,13 @@ function Header() {
                       key={item.href}
                       href={item.href}
                       onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-                      className="block border-b border-white/10 pb-5 font-display text-[2.65rem] font-semibold leading-none text-bone"
+                      className="block border-b border-white/10 pb-5 text-right font-display text-[2.65rem] font-semibold leading-none text-bone"
                     >
                       {item.label}
                     </a>
                   ))}
                 </div>
-                <div className="mt-8 grid gap-3 text-xs font-bold uppercase tracking-[0.16em] text-mist">
+                <div className="mt-8 grid gap-3 text-right text-sm font-bold tracking-normal text-mist">
                   {socialLinks.map((link) => (
                     <a
                       key={link.href}
@@ -446,11 +446,11 @@ function Header() {
               <a
                 href={whatsappUrl}
                 onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-                className="inline-flex w-full items-center justify-center bg-bone px-6 py-4 text-sm font-bold uppercase tracking-[0.16em] text-ink transition active:scale-[0.985]"
+                className="inline-flex w-full items-center justify-center bg-bone px-6 py-4 text-sm font-bold tracking-normal text-ink transition active:scale-[0.985]"
                 target="_blank"
                 rel="noreferrer"
               >
-                Talk to Harel on WhatsApp
+                דברו עם הראל בוואטסאפ
               </a>
             </nav>
           </div>
@@ -467,7 +467,7 @@ function Hero() {
       {/* TODO: Replace hero images in /public/images when the final campaign visuals are ready. */}
       <Image
         src="/images/euforia-stage-mobile.jpg"
-        alt="Euforia stage production on mobile"
+        alt="הפקת במה של אופוריה במובייל"
         fill
         priority
         sizes="(min-width: 768px) 0px, 100vw"
@@ -475,7 +475,7 @@ function Hero() {
       />
       <Image
         src="/images/euforia-hero-stage.jpg"
-        alt="Euforia international stage production"
+        alt="הפקת במה בינלאומית של אופוריה"
         fill
         priority
         sizes="(min-width: 768px) 100vw, 0px"
@@ -496,7 +496,8 @@ function Hero() {
         <div className="pointer-events-auto flex w-full flex-col items-center">
           <nav
             className="mx-auto flex max-w-[24rem] items-center justify-center gap-x-8 md:max-w-[36rem] md:gap-x-12 lg:gap-x-14"
-            aria-label="Hero social links"
+            aria-label="קישורים חברתיים"
+            dir="ltr"
           >
             {heroSocialLinks.map(({ label, href, Icon }) => (
               <a
@@ -514,9 +515,9 @@ function Hero() {
 
           <a
             href="#about"
-            className="mt-8 flex flex-col items-center gap-3 text-center font-display text-[0.92rem] font-black uppercase tracking-[0.12em] text-white transition hover:text-gold md:mt-9 md:text-[1.45rem]"
+            className="mt-8 flex flex-col items-center gap-3 text-center font-display text-[0.92rem] font-black tracking-normal text-white transition hover:text-gold md:mt-9 md:text-[1.45rem]"
           >
-            <span>Scroll Down</span>
+            <span>גלול למטה</span>
             <span className="scroll-cue-line relative h-12 w-px bg-white/35 md:h-16">
               <span className="scroll-pulse absolute left-0 top-0 h-5 w-px bg-white" />
             </span>
@@ -552,23 +553,19 @@ function About() {
     <section id="about" className="snap-section portfolio-section grid overflow-hidden bg-ink py-14 md:py-0">
       <div className="section-shell grid min-h-screen gap-8 pt-6 md:grid-cols-[1fr_0.92fr] md:items-center md:gap-14 md:pt-0">
         <FadeIn className="order-2 md:order-1">
-          <p className="eyebrow mb-5">Harel Amir</p>
-          <p className="mb-8 text-[0.68rem] font-bold uppercase tracking-[0.28em] text-mist">
-            Event Production & Management
+          <p className="eyebrow mb-5">הראל אמיר</p>
+          <p className="mb-8 text-[0.82rem] font-bold tracking-normal text-mist md:text-[0.95rem]">
+            הפקה וניהול אירועים
           </p>
-          <h2 className="text-balance max-w-2xl font-display text-[3rem] font-black uppercase leading-[0.9] text-bone md:text-7xl">
-            Calm control.
-            <span className="block">High energy.</span>
+          <h2 className="text-balance max-w-2xl font-display text-[3rem] font-black leading-[0.95] text-bone md:text-7xl">
+            שליטה רגועה.
+            <span className="block">אנרגיה גבוהה.</span>
           </h2>
           <div className="mt-8 grid max-w-2xl gap-5">
-            <p className="text-lg leading-8 text-bone/86 md:text-2xl md:leading-10">
-              Harel Amir is a Tel Aviv based event producer and event manager, creating private
-              events, weddings, nightlife experiences and international music productions with a
-              sharp eye for timing, atmosphere and detail.
-            </p>
-            <p className="border-l border-gold/50 pl-5 text-base leading-8 text-mist md:text-lg">
-              From supplier coordination to guest flow, sound, service and the small details - the
-              event stays calm, precise and alive.
+            <p className="border-r border-gold/50 pr-5 text-lg leading-8 text-bone/86 md:text-2xl md:leading-10">
+              הראל אמיר יוצר אירועים וחוויות ייחודיות, המותאמות אישית לכל לקוח — עם דגש על אווירה, אסתטיקה ותשומת לב לפרטים הקטנים.
+              <br />
+              מחתונות ואירועים פרטיים ועד הפקות בינלאומיות, כל אירוע נבנה כדי להרגיש אלגנטי, אותנטי ובלתי נשכח.
             </p>
           </div>
         </FadeIn>
@@ -577,7 +574,7 @@ function About() {
             <div className="relative aspect-[4/5] md:h-[78svh] md:aspect-auto">
               <Image
                 src="/images/harel-about-new.jpg"
-                alt="Harel Amir at an event"
+                alt="הראל אמיר באירוע"
                 fill
                 sizes="(min-width: 768px) 44vw, 100vw"
                 className="object-cover object-[48%_42%] saturate-[0.9]"
@@ -615,8 +612,8 @@ function Gallery({
               <button
                 type="button"
                 onClick={() => onOpen(image)}
-                className="group media-frame block aspect-square h-full w-full cursor-pointer bg-ink text-left md:aspect-[4/3] lg:aspect-auto"
-                aria-label={`Open ${image.alt}`}
+                className="group media-frame block aspect-square h-full w-full cursor-pointer bg-ink text-right md:aspect-[4/3] lg:aspect-auto"
+                aria-label={`פתח תמונה: ${image.alt}`}
               >
                 <Image
                   src={image.src}
@@ -645,16 +642,16 @@ function ClientWords({
       <div className="section-shell grid min-h-screen content-center gap-8">
         <FadeIn className="md:flex md:items-end md:justify-between">
           <div>
-            <p className="mb-5 text-[0.66rem] font-bold uppercase tracking-[0.2em] text-brass">Thank You Notes</p>
-            <h2 className="text-balance max-w-3xl font-display text-[2.65rem] font-black uppercase leading-[0.92] text-ink md:text-7xl">
-              Words from the events
+            <p className="mb-5 text-[0.76rem] font-bold tracking-normal text-brass md:text-[0.88rem]">תודות</p>
+            <h2 className="text-balance max-w-3xl font-display text-[2.65rem] font-black leading-[0.95] text-ink md:text-7xl">
+              מילים מהאירועים
             </h2>
           </div>
           <p className="mt-5 max-w-sm text-base leading-7 text-ink/62 md:mt-0">
-            Real messages from couples and clients after the event.
+            הודעות אמיתיות מזוגות ולקוחות אחרי האירוע.
           </p>
         </FadeIn>
-        <div className="testimonial-rail flex snap-x gap-3 overflow-x-auto pb-4 pt-2 md:gap-4" aria-label="Client thank-you notes" dir="rtl">
+        <div className="testimonial-rail flex snap-x gap-3 overflow-x-auto pb-4 pt-2 md:gap-4" aria-label="תודות מלקוחות" dir="rtl">
           {testimonials.map((testimonial, index) => (
             <FadeIn
               key={`${testimonial.names}-${testimonial.date}`}
@@ -667,7 +664,7 @@ function ClientWords({
                 </div>
                 <div className="text-center" dir="rtl">
                   <h3 className="font-display text-[1.45rem] font-black leading-none text-ink">{testimonial.names}</h3>
-                  <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-brass">{testimonial.date}</p>
+                  <p className="mt-2 text-[0.72rem] font-bold tracking-normal text-brass">{testimonial.date}</p>
                 </div>
                 <p className="testimonial-preview mt-5 whitespace-pre-line text-center text-[1rem] leading-7 text-ink/78 md:text-[1.04rem] md:leading-8" dir="rtl">
                   {`״${testimonial.text}״`}
@@ -695,34 +692,34 @@ function Contact() {
       <div className="section-shell flex min-h-screen flex-col justify-center">
         <div className="max-w-4xl">
           <SectionHeading
-            eyebrow="Contact"
-            title="Let's create your next event."
-            text="For private events, weddings, after parties and international productions - send a message and let's build the right experience."
+            eyebrow="יצירת קשר"
+            title="בואו ניצור את האירוע הבא שלכם."
+            text="לאירועים פרטיים, חתונות, אפטרים והפקות בינלאומיות — שלחו הודעה ונבנה יחד את החוויה הנכונה."
           />
           <div className="grid gap-3 sm:flex sm:flex-wrap">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-gold/55 bg-white/[0.025] px-6 py-4 text-sm font-bold uppercase tracking-[0.15em] text-bone backdrop-blur transition hover:bg-gold hover:text-ink active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-gold/55 bg-white/[0.025] px-6 py-4 text-sm font-bold tracking-normal text-bone backdrop-blur transition hover:bg-gold hover:text-ink active:scale-[0.985]"
             >
-              Talk on WhatsApp
+              דברו איתי בוואטסאפ
             </a>
             <a
               href={instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold uppercase tracking-[0.15em] text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold tracking-normal text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
             >
-              Instagram
+              אינסטגרם
             </a>
             <a
               href={euforiaInstagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold uppercase tracking-[0.15em] text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold tracking-normal text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
             >
-              Euforia
+              אופוריה
             </a>
           </div>
         </div>
@@ -730,24 +727,24 @@ function Contact() {
         <footer className="mt-16 border-t border-white/10 pt-8 md:mt-20">
           <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>
-            <p className="font-display text-4xl font-semibold text-bone">Harel Amir</p>
-            <p className="mt-3 text-sm uppercase tracking-[0.16em] text-mist">
-              Event Production & Management
+            <p className="font-display text-4xl font-semibold text-bone" dir="ltr">Harel Amir</p>
+            <p className="mt-3 text-sm tracking-normal text-mist">
+              הפקה וניהול אירועים
             </p>
-            <p className="mt-2 text-mist">Tel Aviv</p>
+            <p className="mt-2 text-mist">תל אביב</p>
           </div>
-          <div className="flex flex-wrap gap-5 text-sm font-semibold uppercase tracking-[0.14em] text-bone/70 md:justify-end">
+          <div className="flex flex-wrap gap-5 text-sm font-semibold tracking-normal text-bone/70 md:justify-end">
             <a className="transition hover:text-gold" href={instagramUrl} target="_blank" rel="noreferrer">
-              Instagram
+              אינסטגרם
             </a>
             <a className="transition hover:text-gold" href={euforiaInstagramUrl} target="_blank" rel="noreferrer">
-              Euforia
+              אופוריה
             </a>
             <a className="transition hover:text-gold" href={facebookUrl} target="_blank" rel="noreferrer">
-              Facebook
+              פייסבוק
             </a>
             <a className="transition hover:text-gold" href={whatsappUrl} target="_blank" rel="noreferrer">
-              WhatsApp
+              וואטסאפ
             </a>
           </div>
           </div>
@@ -778,9 +775,9 @@ function GalleryLightbox({
       <button
         type="button"
         onClick={onClose}
-        className="absolute right-4 top-4 border border-white/20 px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:border-gold hover:text-gold"
+        className="absolute right-4 top-4 border border-white/20 px-4 py-3 text-xs font-bold tracking-normal text-white transition hover:border-gold hover:text-gold"
       >
-        Close
+        סגור
       </button>
       <div className="relative h-[82svh] w-full max-w-6xl overflow-hidden" onClick={(event) => event.stopPropagation()}>
         <Image src={image.src} alt={image.alt} fill sizes="100vw" className="object-contain" />
@@ -807,15 +804,15 @@ function TestimonialModal({
           <button
             type="button"
             onClick={onClose}
-            className="absolute left-4 top-4 border border-ink/18 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-ink/72 transition hover:border-brass hover:text-brass"
+            className="absolute left-4 top-4 border border-ink/18 px-3 py-2 text-[0.76rem] font-bold tracking-normal text-ink/72 transition hover:border-brass hover:text-brass"
           >
-            Close
+            סגור
           </button>
           <div className="mx-auto mb-5 mt-7 flex h-9 w-9 items-center justify-center rounded-full border border-brass/35 text-sm text-brass md:mt-0">
             ♥
           </div>
           <h3 className="font-display text-3xl font-black leading-none text-ink">{testimonial.names}</h3>
-          <p className="mt-2 text-center text-xs font-bold uppercase tracking-[0.18em] text-brass">
+          <p className="mt-2 text-center text-xs font-bold tracking-normal text-brass">
             {testimonial.date}
           </p>
           <p className="mt-8 whitespace-pre-line text-right text-lg leading-9 text-ink/86 md:text-xl">
@@ -834,10 +831,10 @@ function StickyMobileCta() {
         href={whatsappUrl}
         target="_blank"
         rel="noreferrer"
-        className="flex w-full items-center justify-center gap-3 bg-bone px-5 py-4 text-sm font-bold uppercase tracking-[0.14em] text-ink shadow-glow transition active:scale-[0.985]"
+        className="flex w-full items-center justify-center gap-3 bg-bone px-5 py-4 text-sm font-bold tracking-normal text-ink shadow-glow transition active:scale-[0.985]"
       >
         <span className="h-2 w-2 rounded-full bg-gold" aria-hidden="true" />
-        Talk to Harel on WhatsApp
+        דברו עם הראל בוואטסאפ
       </a>
     </div>
   );

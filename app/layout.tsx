@@ -1,19 +1,34 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Assistant, Heebo } from "next/font/google";
 import "./globals.css";
 
+const heebo = Heebo({
+  subsets: ["hebrew", "latin"],
+  weight: ["500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  display: "swap"
+});
+
+const assistant = Assistant({
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-body",
+  display: "swap"
+});
+
 export const metadata: Metadata = {
-  title: "Harel Amir | Event Production & Event Management",
+  title: "הראל אמיר | הפקה וניהול אירועים",
   description:
-    "Tel Aviv based event producer and event manager for private events, weddings, after parties and international music productions.",
+    "הראל אמיר יוצר ומנהל אירועים פרטיים, חתונות והפקות בינלאומיות עם דגש על אווירה, אסתטיקה ותשומת לב לפרטים הקטנים.",
   metadataBase: new URL("https://harelamir.com"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Harel Amir | Event Production & Event Management",
+    title: "הראל אמיר | הפקה וניהול אירועים",
     description:
-      "Tel Aviv based event producer and event manager for private events, weddings, after parties and international music productions.",
+      "הראל אמיר יוצר ומנהל אירועים פרטיים, חתונות והפקות בינלאומיות עם דגש על אווירה, אסתטיקה ותשומת לב לפרטים הקטנים.",
     url: "https://harelamir.com",
     siteName: "Harel Amir",
     images: [
@@ -21,17 +36,17 @@ export const metadata: Metadata = {
         url: "/images/euforia-hero-stage.jpg",
         width: 2400,
         height: 1603,
-        alt: "Harel Amir event production"
+        alt: "הפקת אירועים של הראל אמיר"
       }
     ],
-    locale: "en_US",
+    locale: "he_IL",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Harel Amir | Event Production & Event Management",
+    title: "הראל אמיר | הפקה וניהול אירועים",
     description:
-      "Tel Aviv based event producer and event manager for private events, weddings, after parties and international music productions.",
+      "הראל אמיר יוצר ומנהל אירועים פרטיים, חתונות והפקות בינלאומיות עם דגש על אווירה, אסתטיקה ותשומת לב לפרטים הקטנים.",
     images: ["/images/euforia-hero-stage.jpg"]
   },
   robots: {
@@ -52,8 +67,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="he" dir="rtl">
+      <body className={`${heebo.variable} ${assistant.variable}`}>{children}</body>
     </html>
   );
 }
