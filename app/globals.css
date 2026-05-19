@@ -6,8 +6,18 @@
   --font-display: "Heebo", "Assistant", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Assistant", "Heebo", "Helvetica Neue", Arial, sans-serif;
   --header-height: 76px;
-  color-scheme: dark;
-  background: #050505;
+  --color-ink: #171512;
+  --color-charcoal: #27221c;
+  --color-bone: #f4efe5;
+  --color-cream: #f6f0e6;
+  --color-ivory: #fbf7ee;
+  --color-stone: #efe6d7;
+  --color-mist: #6e665a;
+  --color-gold: #b89455;
+  --color-brass: #8a6f3e;
+  --color-border: rgba(23, 21, 18, 0.12);
+  color-scheme: light;
+  background: var(--color-cream);
 }
 
 * {
@@ -16,17 +26,17 @@
 
 html {
   scroll-behavior: smooth;
-  background: #050505;
+  background: var(--color-cream);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 18% 0%, rgba(201, 168, 103, 0.11), transparent 32rem),
-    radial-gradient(circle at 92% 48%, rgba(42, 73, 72, 0.16), transparent 30rem),
-    linear-gradient(180deg, #050505 0%, #0b0a09 42%, #050505 100%);
-  color: #f4efe5;
+    radial-gradient(circle at 14% 2%, rgba(184, 148, 85, 0.16), transparent 34rem),
+    radial-gradient(circle at 92% 42%, rgba(110, 102, 90, 0.12), transparent 30rem),
+    linear-gradient(180deg, var(--color-cream) 0%, var(--color-bone) 45%, var(--color-stone) 100%);
+  color: var(--color-ink);
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,8 +44,8 @@ body {
 }
 
 body::selection {
-  background: rgba(201, 168, 103, 0.38);
-  color: #ffffff;
+  background: rgba(184, 148, 85, 0.34);
+  color: var(--color-ink);
 }
 
 a {
@@ -90,11 +100,11 @@ img {
   inset: 0;
   pointer-events: none;
   z-index: 60;
-  opacity: 0.08;
-  mix-blend-mode: soft-light;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(23, 21, 18, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 21, 18, 0.018) 1px, transparent 1px);
   background-size: 3px 3px;
 }
 
@@ -105,7 +115,7 @@ img {
 }
 
 .eyebrow {
-  color: #c9a867;
+  color: var(--color-brass);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -122,22 +132,22 @@ img {
   top: 0;
   height: 1px;
   content: "";
-  background: linear-gradient(90deg, transparent, rgba(244, 239, 229, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
 }
 
 .luxury-panel {
   position: relative;
-  border: 1px solid rgba(244, 239, 229, 0.11);
+  border: 1px solid var(--color-border);
   background:
-    linear-gradient(145deg, rgba(244, 239, 229, 0.055), rgba(255, 255, 255, 0.018)),
-    rgba(16, 16, 15, 0.7);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    linear-gradient(145deg, rgba(255, 249, 240, 0.72), rgba(239, 230, 215, 0.42)),
+    rgba(251, 247, 238, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 249, 240, 0.64);
 }
 
 .media-frame {
   position: relative;
   overflow: hidden;
-  background: #050505;
+  background: var(--color-charcoal);
 }
 
 .media-frame::after {
@@ -146,8 +156,8 @@ img {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(115deg, transparent 0%, rgba(244, 239, 229, 0.09) 42%, transparent 58%),
-    radial-gradient(circle at 50% 0%, rgba(201, 168, 103, 0.16), transparent 50%);
+    linear-gradient(115deg, transparent 0%, rgba(246, 240, 230, 0.16) 42%, transparent 58%),
+    radial-gradient(circle at 50% 0%, rgba(184, 148, 85, 0.18), transparent 50%);
   opacity: 0;
   transform: translateX(-28%);
   transition: opacity 700ms ease, transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -164,7 +174,7 @@ img {
 }
 
 .testimonial-section::before {
-  background: linear-gradient(90deg, transparent, rgba(5, 5, 5, 0.12), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
 }
 
 .testimonial-section::after {
@@ -173,8 +183,8 @@ img {
   pointer-events: none;
   content: "";
   background-image:
-    linear-gradient(rgba(5, 5, 5, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(5, 5, 5, 0.018) 1px, transparent 1px);
+    linear-gradient(rgba(23, 21, 18, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 21, 18, 0.018) 1px, transparent 1px);
   background-size: 18px 18px;
   opacity: 0.28;
 }
@@ -187,7 +197,7 @@ img {
 .testimonial-rail {
   direction: rtl;
   scroll-padding-inline: 1rem;
-  scrollbar-color: rgba(139, 109, 53, 0.48) rgba(5, 5, 5, 0.08);
+  scrollbar-color: rgba(138, 111, 62, 0.48) rgba(23, 21, 18, 0.08);
   scrollbar-width: thin;
 }
 
@@ -196,11 +206,11 @@ img {
 }
 
 .testimonial-rail::-webkit-scrollbar-track {
-  background: rgba(5, 5, 5, 0.08);
+  background: rgba(23, 21, 18, 0.08);
 }
 
 .testimonial-rail::-webkit-scrollbar-thumb {
-  background: rgba(139, 109, 53, 0.48);
+  background: rgba(138, 111, 62, 0.48);
 }
 
 .testimonial-card {
@@ -216,31 +226,35 @@ img {
 
 .field {
   width: 100%;
-  border: 1px solid rgba(244, 239, 229, 0.12);
+  border: 1px solid var(--color-border);
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.03);
-  color: #f4efe5;
+  background: rgba(251, 247, 238, 0.72);
+  color: var(--color-ink);
   outline: none;
   padding: 1.05rem 1rem;
   transition: border-color 160ms ease, background-color 160ms ease;
 }
 
 .field:focus {
-  border-color: rgba(201, 168, 103, 0.72);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(184, 148, 85, 0.72);
+  background: rgba(251, 247, 238, 0.94);
 }
 
 .field::placeholder {
-  color: rgba(244, 239, 229, 0.42);
+  color: rgba(110, 102, 90, 0.58);
 }
 
 .gold-line {
-  background: linear-gradient(90deg, transparent, rgba(201, 168, 103, 0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(184, 148, 85, 0.72), transparent);
   height: 1px;
 }
 
 .scroll-pulse {
   animation: scroll-pulse 1.55s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.scroll-cue-line {
+  filter: drop-shadow(0 6px 12px rgba(23, 21, 18, 0.82));
 }
 
 .scroll-cue-line::after {

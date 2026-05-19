@@ -378,7 +378,7 @@ function FadeIn({
 
 function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-ink via-ink/72 to-transparent">
+    <header className="absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-ink/90 via-ink/60 to-transparent">
       <div className="section-shell flex h-[var(--header-height)] items-center justify-between md:h-28">
         <a href="#hero" className="group min-w-0" aria-label="דף הבית של Harel Amir">
           <span className="relative block h-12 w-44 overflow-hidden md:h-16 md:w-64 lg:w-72" dir="ltr">
@@ -406,7 +406,7 @@ function Header() {
         </nav>
 
         <details className="group md:hidden">
-          <summary className="relative z-50 flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-white/12 bg-white/[0.03] text-bone backdrop-blur [&::-webkit-details-marker]:hidden">
+          <summary className="relative z-50 flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-bone/20 bg-ink/20 text-bone backdrop-blur [&::-webkit-details-marker]:hidden">
             <span className="sr-only">פתח תפריט</span>
             <span className="relative h-4 w-5">
               <span className="absolute left-0 top-0 h-px w-5 bg-bone transition group-open:translate-y-2 group-open:rotate-45" />
@@ -416,7 +416,7 @@ function Header() {
           </summary>
 
           <div
-            className="invisible absolute left-0 top-0 z-40 h-[100svh] w-screen translate-x-full bg-ink px-5 pb-8 pt-28 opacity-0 transition duration-300 group-open:visible group-open:translate-x-0 group-open:opacity-100"
+            className="invisible absolute left-0 top-0 z-40 h-[100svh] w-screen translate-x-full bg-cream px-5 pb-8 pt-28 text-ink opacity-0 shadow-[0_24px_80px_rgba(23,21,18,0.18)] transition duration-300 group-open:visible group-open:translate-x-0 group-open:opacity-100"
           >
             <nav className="flex h-full flex-col justify-between" aria-label="ניווט מובייל">
               <div>
@@ -426,7 +426,7 @@ function Header() {
                       key={item.href}
                       href={item.href}
                       onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-                      className="block border-b border-white/10 pb-5 text-right font-display text-[2.65rem] font-semibold leading-none text-bone"
+                      className="block border-b border-ink/10 pb-5 text-right font-display text-[2.65rem] font-semibold leading-none text-ink"
                     >
                       {item.label}
                     </a>
@@ -450,7 +450,7 @@ function Header() {
               <a
                 href={whatsappUrl}
                 onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-                className="inline-flex w-full items-center justify-center bg-bone px-6 py-4 text-sm font-bold tracking-normal text-ink transition active:scale-[0.985]"
+                className="inline-flex w-full items-center justify-center bg-ink px-6 py-4 text-sm font-bold tracking-normal text-bone shadow-glow transition active:scale-[0.985]"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -491,9 +491,9 @@ function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="absolute inset-x-0 top-0 h-[42%] bg-gradient-to-b from-black via-black/76 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-[46%] bg-gradient-to-t from-black via-black/58 to-transparent" />
-        <div className="absolute inset-0 bg-black/18 md:bg-black/10" />
+        <div className="absolute inset-x-0 top-0 h-[42%] bg-gradient-to-b from-ink/90 via-ink/70 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-t from-cream via-ink/50 to-transparent" />
+        <div className="absolute inset-0 bg-ink/24 md:bg-ink/16" />
       </motion.div>
 
       <div className="section-shell pointer-events-none relative z-10 flex min-h-screen items-end justify-center pb-16 pt-36 md:pb-20 md:pt-36">
@@ -519,10 +519,10 @@ function Hero() {
 
           <a
             href="#about"
-            className="mt-8 flex flex-col items-center gap-3 text-center font-display text-[0.92rem] font-black tracking-normal text-white transition hover:text-gold md:mt-9 md:text-[1.45rem]"
+            className="mt-8 flex flex-col items-center gap-3 text-center font-display text-[0.92rem] font-black tracking-normal text-white drop-shadow-[0_8px_22px_rgba(23,21,18,0.7)] transition hover:text-gold md:mt-9 md:text-[1.45rem]"
           >
             <span>גלול למטה</span>
-            <span className="scroll-cue-line relative h-12 w-px bg-white/35 md:h-16">
+            <span className="scroll-cue-line relative h-12 w-px bg-white/40 md:h-16">
               <span className="scroll-pulse absolute left-0 top-0 h-5 w-px bg-white" />
             </span>
           </a>
@@ -544,7 +544,7 @@ function SectionHeading({
   return (
     <FadeIn className="mb-12 md:mb-16">
       <p className="eyebrow mb-5">{eyebrow}</p>
-      <h2 className="text-balance max-w-3xl font-display text-[2.75rem] font-semibold leading-[0.92] text-bone md:text-7xl">
+      <h2 className="text-balance max-w-3xl font-display text-[2.75rem] font-semibold leading-[0.92] text-ink md:text-7xl">
         {title}
       </h2>
       {text ? <p className="mt-7 max-w-2xl text-base leading-8 text-mist md:text-lg">{text}</p> : null}
@@ -554,19 +554,19 @@ function SectionHeading({
 
 function About() {
   return (
-    <section id="about" className="snap-section portfolio-section grid overflow-hidden bg-ink py-14 md:py-0">
+    <section id="about" className="snap-section portfolio-section grid overflow-hidden bg-cream py-14 text-ink md:py-0">
       <div className="section-shell grid min-h-screen gap-8 pt-6 md:grid-cols-[1fr_0.92fr] md:items-center md:gap-14 md:pt-0">
         <FadeIn className="order-2 md:order-1">
           <p className="eyebrow mb-5">הראל אמיר</p>
           <p className="mb-8 text-[0.82rem] font-bold tracking-normal text-mist md:text-[0.95rem]">
             הפקה וניהול אירועים
           </p>
-          <h2 className="text-balance max-w-2xl font-display text-[3rem] font-black leading-[0.95] text-bone md:text-7xl">
+          <h2 className="text-balance max-w-2xl font-display text-[3rem] font-black leading-[0.95] text-ink md:text-7xl">
             שליטה רגועה.
             <span className="block">אנרגיה גבוהה.</span>
           </h2>
           <div className="mt-8 grid max-w-2xl gap-5">
-            <p className="border-r border-gold/50 pr-5 text-lg leading-8 text-bone/86 md:text-2xl md:leading-10">
+            <p className="border-r border-gold/60 pr-5 text-lg leading-8 text-ink/80 md:text-2xl md:leading-10">
               הראל אמיר יוצר אירועים וחוויות ייחודיות, המותאמות אישית לכל לקוח — עם דגש על אווירה, אסתטיקה ותשומת לב לפרטים הקטנים.
               <br />
               מחתונות ואירועים פרטיים ועד הפקות בינלאומיות, כל אירוע נבנה כדי להרגיש אלגנטי, אותנטי ובלתי נשכח.
@@ -574,7 +574,7 @@ function About() {
           </div>
         </FadeIn>
         <FadeIn delay={0.04} className="order-1 md:order-2">
-          <div className="relative mx-auto w-full max-w-[25rem] overflow-hidden rounded-[1.15rem] border border-white/10 bg-white/[0.035] shadow-glow md:max-w-none">
+          <div className="relative mx-auto w-full max-w-[25rem] overflow-hidden rounded-[1.15rem] border border-ink/10 bg-ivory shadow-glow md:max-w-none">
             <div className="relative aspect-[4/5] md:h-[78svh] md:aspect-auto">
               <Image
                 src="/images/harel-about-new.jpg"
@@ -583,7 +583,7 @@ function About() {
                 sizes="(min-width: 768px) 44vw, 100vw"
                 className="object-cover object-[48%_42%] saturate-[0.9]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/58 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
             </div>
           </div>
         </FadeIn>
@@ -608,7 +608,7 @@ function Gallery({
   }, []);
 
   return (
-    <section id="gallery" className="snap-section gallery-section portfolio-section overflow-hidden bg-bone py-0 text-ink">
+    <section id="gallery" className="snap-section gallery-section portfolio-section overflow-hidden bg-stone py-0 text-ink">
       <div className="section-shell py-6 md:grid md:min-h-screen md:content-center md:py-0">
         <div className="grid grid-cols-3 gap-1 sm:gap-2 md:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[13vh]">
           {displayedGalleryImages.map((image, index) => (
@@ -616,7 +616,7 @@ function Gallery({
               <button
                 type="button"
                 onClick={() => onOpen(image)}
-                className="group media-frame block aspect-square h-full w-full cursor-pointer bg-ink text-right md:aspect-[4/3] lg:aspect-auto"
+                className="group media-frame block aspect-square h-full w-full cursor-pointer bg-charcoal text-right md:aspect-[4/3] lg:aspect-auto"
                 aria-label={`פתח תמונה: ${image.alt}`}
               >
                 <Image
@@ -642,7 +642,7 @@ function ClientWords({
   onOpen: (testimonial: (typeof testimonials)[number]) => void;
 }) {
   return (
-    <section id="words" className="snap-section portfolio-section testimonial-section grid overflow-hidden bg-bone py-14 text-ink md:py-0">
+    <section id="words" className="snap-section portfolio-section testimonial-section grid overflow-hidden bg-cream py-14 text-ink md:py-0">
       <div className="section-shell grid min-h-screen content-center gap-8">
         <FadeIn className="md:flex md:items-end md:justify-between">
           <div>
@@ -651,7 +651,7 @@ function ClientWords({
               מילים מהאירועים
             </h2>
           </div>
-          <p className="mt-5 max-w-sm text-base leading-7 text-ink/62 md:mt-0">
+          <p className="mt-5 max-w-sm text-base leading-7 text-ink/60 md:mt-0">
             הודעות אמיתיות מזוגות ולקוחות אחרי האירוע.
           </p>
         </FadeIn>
@@ -662,8 +662,8 @@ function ClientWords({
               delay={(index % 3) * 0.04}
               className="min-w-[74vw] snap-start sm:min-w-[20rem] md:min-w-[calc((100%_-_2rem)/3)] lg:min-w-[calc((100%_-_3rem)/4)]"
             >
-              <article className="testimonial-card flex min-h-[16.5rem] flex-col border border-ink/18 bg-[#fbf7ee] px-5 pb-5 pt-4 shadow-[0_18px_48px_rgba(5,5,5,0.08)] md:min-h-[18rem] md:px-6 md:pb-6">
-                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-brass/35 text-sm text-brass">
+              <article className="testimonial-card flex min-h-[16.5rem] flex-col border border-ink/10 bg-ivory px-5 pb-5 pt-4 shadow-[0_18px_48px_rgba(80,63,38,0.08)] md:min-h-[18rem] md:px-6 md:pb-6">
+                <div className="mx-auto mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-brass/40 text-sm text-brass">
                   ♥
                 </div>
                 <div className="text-center" dir="rtl">
@@ -691,8 +691,8 @@ function ClientWords({
 
 function Contact() {
   return (
-    <section id="contact" className="snap-section portfolio-section relative grid overflow-hidden py-14 md:py-0">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_10%,rgba(201,168,103,0.16),transparent_34rem)]" />
+    <section id="contact" className="snap-section portfolio-section relative grid overflow-hidden bg-stone py-14 text-ink md:py-0">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_10%,rgba(184,148,85,0.18),transparent_34rem)]" />
       <div className="section-shell flex min-h-screen flex-col justify-center">
         <div className="max-w-4xl">
           <SectionHeading
@@ -705,7 +705,7 @@ function Contact() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-gold/55 bg-white/[0.025] px-6 py-4 text-sm font-bold tracking-normal text-bone backdrop-blur transition hover:bg-gold hover:text-ink active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-gold/60 bg-ink px-6 py-4 text-sm font-bold tracking-normal text-bone shadow-glow transition hover:bg-gold hover:text-ink active:scale-[0.985]"
             >
               דברו איתי בוואטסאפ
             </a>
@@ -713,7 +713,7 @@ function Contact() {
               href={instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold tracking-normal text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-ink/10 bg-ivory/60 px-6 py-4 text-sm font-bold tracking-normal text-ink/75 transition hover:border-gold/60 hover:text-brass active:scale-[0.985]"
             >
               אינסטגרם
             </a>
@@ -721,33 +721,33 @@ function Contact() {
               href={euforiaInstagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center border border-white/14 px-6 py-4 text-sm font-bold tracking-normal text-bone/82 transition hover:border-gold/55 hover:text-gold active:scale-[0.985]"
+              className="inline-flex items-center justify-center border border-ink/10 bg-ivory/60 px-6 py-4 text-sm font-bold tracking-normal text-ink/75 transition hover:border-gold/60 hover:text-brass active:scale-[0.985]"
             >
               אופוריה
             </a>
           </div>
         </div>
 
-        <footer className="mt-16 border-t border-white/10 pt-8 md:mt-20">
+        <footer className="mt-16 border-t border-ink/10 pt-8 md:mt-20">
           <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>
-            <p className="font-display text-4xl font-semibold text-bone" dir="ltr">Harel Amir</p>
+            <p className="font-display text-4xl font-semibold text-ink" dir="ltr">Harel Amir</p>
             <p className="mt-3 text-sm tracking-normal text-mist">
               הפקה וניהול אירועים
             </p>
             <p className="mt-2 text-mist">תל אביב</p>
           </div>
-          <div className="flex flex-wrap gap-5 text-sm font-semibold tracking-normal text-bone/70 md:justify-end">
-            <a className="transition hover:text-gold" href={instagramUrl} target="_blank" rel="noreferrer">
+          <div className="flex flex-wrap gap-5 text-sm font-semibold tracking-normal text-ink/70 md:justify-end">
+            <a className="transition hover:text-brass" href={instagramUrl} target="_blank" rel="noreferrer">
               אינסטגרם
             </a>
-            <a className="transition hover:text-gold" href={euforiaInstagramUrl} target="_blank" rel="noreferrer">
+            <a className="transition hover:text-brass" href={euforiaInstagramUrl} target="_blank" rel="noreferrer">
               אופוריה
             </a>
-            <a className="transition hover:text-gold" href={facebookUrl} target="_blank" rel="noreferrer">
+            <a className="transition hover:text-brass" href={facebookUrl} target="_blank" rel="noreferrer">
               פייסבוק
             </a>
-            <a className="transition hover:text-gold" href={whatsappUrl} target="_blank" rel="noreferrer">
+            <a className="transition hover:text-brass" href={whatsappUrl} target="_blank" rel="noreferrer">
               וואטסאפ
             </a>
           </div>
@@ -771,7 +771,7 @@ function GalleryLightbox({
 
   return (
     <div
-      className="fixed inset-0 z-[80] grid place-items-center bg-black/92 p-4"
+      className="fixed inset-0 z-[80] grid place-items-center bg-black/90 p-4"
       role="dialog"
       aria-modal="true"
       onClick={onClose}
@@ -802,24 +802,24 @@ function TestimonialModal({
   }
 
   return (
-    <div className="fixed inset-0 z-[80] overflow-y-auto bg-black/82 px-4 py-5 md:p-6" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-[80] overflow-y-auto bg-black/80 px-4 py-5 md:p-6" role="dialog" aria-modal="true">
       <div className="mx-auto flex min-h-[100svh] max-w-2xl items-center py-12">
-        <article className="relative w-full border border-ink/12 bg-bone px-6 py-8 text-center text-ink shadow-[0_30px_90px_rgba(0,0,0,0.45)] md:px-10 md:py-10" dir="rtl">
+        <article className="relative w-full border border-ink/10 bg-ivory px-6 py-8 text-center text-ink shadow-[0_30px_90px_rgba(80,63,38,0.22)] md:px-10 md:py-10" dir="rtl">
           <button
             type="button"
             onClick={onClose}
-            className="absolute left-4 top-4 border border-ink/18 px-3 py-2 text-[0.76rem] font-bold tracking-normal text-ink/72 transition hover:border-brass hover:text-brass"
+            className="absolute left-4 top-4 border border-ink/20 px-3 py-2 text-[0.76rem] font-bold tracking-normal text-ink/70 transition hover:border-brass hover:text-brass"
           >
             סגור
           </button>
-          <div className="mx-auto mb-5 mt-7 flex h-9 w-9 items-center justify-center rounded-full border border-brass/35 text-sm text-brass md:mt-0">
+          <div className="mx-auto mb-5 mt-7 flex h-9 w-9 items-center justify-center rounded-full border border-brass/40 text-sm text-brass md:mt-0">
             ♥
           </div>
           <h3 className="font-display text-3xl font-black leading-none text-ink">{testimonial.names}</h3>
           <p className="mt-2 text-center text-xs font-bold tracking-normal text-brass">
             {testimonial.date}
           </p>
-          <p className="mt-8 whitespace-pre-line text-right text-lg leading-9 text-ink/86 md:text-xl">
+          <p className="mt-8 whitespace-pre-line text-right text-lg leading-9 text-ink/80 md:text-xl">
             {`״${testimonial.text}״`}
           </p>
         </article>
@@ -830,7 +830,7 @@ function TestimonialModal({
 
 function StickyMobileCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-ink/76 p-3 backdrop-blur-2xl md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink/10 bg-cream/90 p-3 shadow-[0_-18px_42px_rgba(80,63,38,0.14)] backdrop-blur-2xl md:hidden">
       <a
         href={whatsappUrl}
         target="_blank"

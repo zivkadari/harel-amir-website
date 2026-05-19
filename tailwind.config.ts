@@ -8,19 +8,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#050505",
-        charcoal: "#10100f",
-        bone: "#f4efe5",
-        mist: "#c9c0b0",
-        gold: "#c9a867",
-        brass: "#8d7245"
+        ink: "#171512",
+        charcoal: "#27221c",
+        bone: "#F4EFE5",
+        cream: "#F6F0E6",
+        ivory: "#FBF7EE",
+        stone: "#EFE6D7",
+        mist: "#6E665A",
+        gold: "#B89455",
+        brass: "#8A6F3E"
       },
       fontFamily: {
         display: ["var(--font-display)", "Arial", "Helvetica", "sans-serif"],
         body: ["var(--font-body)", "Arial", "Helvetica", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 24px 90px rgba(201, 168, 103, 0.12)"
+        glow: "0 24px 90px rgba(80, 63, 38, 0.14)"
       }
     }
   },
