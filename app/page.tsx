@@ -555,7 +555,7 @@ function SectionHeading({
 function About() {
   return (
     <section id="about" className="snap-section portfolio-section grid overflow-hidden bg-cream py-14 text-ink md:py-0">
-      <div className="section-shell grid min-h-screen gap-8 pt-6 md:grid-cols-[1fr_0.92fr] md:items-center md:gap-14 md:pt-0">
+      <div className="section-shell grid gap-8 pt-6 md:min-h-screen md:grid-cols-[1fr_0.92fr] md:items-center md:gap-14 md:pt-0">
         <FadeIn className="order-2 md:order-1">
           <p className="eyebrow mb-5">הראל אמיר</p>
           <p className="mb-8 text-[0.82rem] font-bold tracking-normal text-mist md:text-[0.95rem]">
@@ -609,7 +609,7 @@ function Gallery({
 
   return (
     <section id="gallery" className="snap-section gallery-section portfolio-section overflow-hidden bg-stone py-0 text-ink">
-      <div className="section-shell py-6 md:grid md:min-h-screen md:content-center md:py-0">
+      <div className="section-shell pb-5 pt-6 md:grid md:min-h-screen md:content-center md:py-0">
         <div className="grid grid-cols-3 gap-1 sm:gap-2 md:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[13vh]">
           {displayedGalleryImages.map((image, index) => (
             <FadeIn key={image.src} delay={index * 0.018} className={image.className}>
@@ -642,8 +642,8 @@ function ClientWords({
   onOpen: (testimonial: (typeof testimonials)[number]) => void;
 }) {
   return (
-    <section id="words" className="snap-section portfolio-section testimonial-section grid overflow-hidden bg-cream py-14 text-ink md:py-0">
-      <div className="section-shell grid min-h-screen content-center gap-8">
+    <section id="words" className="snap-section portfolio-section testimonial-section grid overflow-hidden bg-cream py-12 text-ink md:py-0">
+      <div className="section-shell grid gap-8 md:min-h-screen md:content-center">
         <FadeIn className="md:flex md:items-end md:justify-between">
           <div>
             <p className="mb-5 text-[0.76rem] font-bold tracking-normal text-brass md:text-[0.88rem]">תודות</p>
@@ -691,9 +691,9 @@ function ClientWords({
 
 function Contact() {
   return (
-    <section id="contact" className="snap-section portfolio-section relative grid overflow-hidden bg-stone py-14 text-ink md:py-0">
+    <section id="contact" className="snap-section portfolio-section relative grid overflow-hidden bg-stone py-12 pb-28 text-ink md:py-0">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_10%,rgba(184,148,85,0.18),transparent_34rem)]" />
-      <div className="section-shell flex min-h-screen flex-col justify-center">
+      <div className="section-shell flex flex-col justify-center md:min-h-screen">
         <div className="max-w-4xl">
           <SectionHeading
             eyebrow="יצירת קשר"
@@ -728,7 +728,7 @@ function Contact() {
           </div>
         </div>
 
-        <footer className="mt-16 border-t border-ink/10 pt-8 md:mt-20">
+        <footer className="mt-12 border-t border-ink/10 pt-8 md:mt-20">
           <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>
             <p className="font-display text-4xl font-semibold text-ink" dir="ltr">Harel Amir</p>
