@@ -63,6 +63,16 @@ img {
   scroll-snap-align: start;
 }
 
+.gallery-section {
+  min-height: auto;
+}
+
+@media (min-width: 768px) {
+  .gallery-section {
+    min-height: 100svh;
+  }
+}
+
 @media (min-width: 768px) {
   .snap-main {
     height: 100svh;

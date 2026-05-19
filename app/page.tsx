@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   FaFacebookF,
@@ -41,104 +41,170 @@ const heroSocialLinks = [
   { label: "Harel Instagram", href: instagramUrl, Icon: FaInstagram },
 ];
 
-const galleryImages = [
+type GalleryImageType = "people" | "production";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  aspect: string;
+  className: string;
+  type: GalleryImageType;
+};
+
+const GALLERY_DISPLAY_COUNT = 12;
+const GALLERY_PAIR_COUNT = GALLERY_DISPLAY_COUNT / 2;
+
+const galleryImages: GalleryImage[] = [
   {
     src: "/images/harel-wedding.jpg",
     alt: "Harel Amir with wedding clients",
     aspect: "aspect-[4/5]",
-    className: "md:row-span-2"
+    className: "md:row-span-2",
+    type: "people"
   },
   {
     src: "/images/harel-with-couple-wedding-hall.jpg",
     alt: "Harel Amir with a wedding couple",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/harel-couple-venue-night.jpg",
     alt: "Harel Amir with a couple at a night venue",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/private-event-setup.jpg",
     alt: "Private event setup with tables and sound",
     aspect: "aspect-[4/3]",
-    className: ""
+    className: "",
+    type: "production"
   },
   {
     src: "/images/wedding-floral-canopy.jpg",
     alt: "White floral wedding canopy",
     aspect: "aspect-[4/3]",
-    className: ""
+    className: "",
+    type: "production"
   },
   {
     src: "/images/harel-couple-white-venue.jpg",
     alt: "Harel Amir with a wedding couple inside the venue",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/euforia-stage-wide.jpg",
     alt: "Wide Euforia stage production",
     aspect: "aspect-[16/10]",
-    className: "md:col-span-2"
+    className: "md:col-span-2",
+    type: "production"
   },
   {
     src: "/images/harel-beach-sign.jpg",
     alt: "Harel Amir at a beach event entrance",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/harel-party-couple.jpg",
     alt: "Harel Amir with a couple during the party",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/euforia-beach-aerial.jpg",
     alt: "Aerial beach production",
     aspect: "aspect-[4/3]",
-    className: ""
+    className: "",
+    type: "production"
   },
   {
     src: "/images/euforia-beach-day.jpg",
     alt: "Beach production during the day",
     aspect: "aspect-[4/3]",
-    className: ""
+    className: "",
+    type: "production"
   },
   {
     src: "/images/euforia-stage-canopy-night.jpg",
     alt: "Night stage canopy and lighting production",
     aspect: "aspect-[16/10]",
-    className: "md:col-span-2"
+    className: "md:col-span-2",
+    type: "production"
   },
   {
     src: "/images/euforia-lights.jpg",
     alt: "Stage lights at event production",
     aspect: "aspect-[4/3]",
-    className: ""
+    className: "",
+    type: "production"
   },
   {
     src: "/images/euforia-dj-crowd.jpg",
     alt: "DJ and crowd at electronic music event",
     aspect: "aspect-[16/10]",
-    className: "md:col-span-2"
+    className: "md:col-span-2",
+    type: "production"
   },
   {
     src: "/images/harel-network.jpg",
     alt: "Harel Amir with event guests",
     aspect: "aspect-[4/5]",
-    className: ""
+    className: "",
+    type: "people"
   },
   {
     src: "/images/euforia-crowd-front.jpg",
     alt: "Euforia crowd energy",
     aspect: "aspect-[4/5]",
-    className: "md:row-span-2"
+    className: "md:row-span-2",
+    type: "production"
   }
 ];
+
+function shuffleArray<T>(items: T[]) {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
+
+function pickAlternatingGalleryImages(images: GalleryImage[], randomize = false) {
+  const orderedImages = randomize ? shuffleArray(images) : images;
+  const peopleImages = orderedImages.filter((image) => image.type === "people");
+  const productionImages = orderedImages.filter((image) => image.type === "production");
+  const selected: GalleryImage[] = [];
+  const usedSources = new Set<string>();
+
+  const addImage = (image: GalleryImage | undefined) => {
+    if (!image || usedSources.has(image.src) || selected.length >= GALLERY_DISPLAY_COUNT) {
+      return;
+    }
+
+    usedSources.add(image.src);
+    selected.push(image);
+  };
+
+  const fallbackImage = () => orderedImages.find((image) => !usedSources.has(image.src));
+
+  for (let index = 0; index < GALLERY_PAIR_COUNT; index += 1) {
+    addImage(peopleImages[index] ?? fallbackImage());
+    addImage(productionImages[index] ?? fallbackImage());
+  }
+
+  return selected;
+}
 
 const testimonials = [
   {
@@ -530,22 +596,21 @@ function Gallery({
 }: {
   onOpen: (image: (typeof galleryImages)[number]) => void;
 }) {
+  const [displayedGalleryImages, setDisplayedGalleryImages] = useState(() =>
+    pickAlternatingGalleryImages(galleryImages)
+  );
+
+  useEffect(() => {
+    if (galleryImages.length > GALLERY_DISPLAY_COUNT) {
+      setDisplayedGalleryImages(pickAlternatingGalleryImages(galleryImages, true));
+    }
+  }, []);
+
   return (
-    <section id="gallery" className="snap-section portfolio-section grid overflow-hidden bg-bone py-14 text-ink md:py-0">
-      <div className="section-shell grid min-h-screen content-center gap-8">
-        <FadeIn className="md:flex md:items-end md:justify-between">
-          <div>
-            <p className="mb-4 text-[0.66rem] font-bold uppercase tracking-[0.2em] text-brass">Gallery</p>
-            <h2 className="text-balance max-w-3xl font-display text-[2.75rem] font-black uppercase leading-[0.92] md:text-7xl">
-              Visual proof.
-            </h2>
-          </div>
-          <p className="mt-5 max-w-md text-sm font-semibold uppercase leading-6 tracking-[0.12em] text-ink/55 md:mt-0">
-            Private events, open-air productions, nightlife and Euforia moments.
-          </p>
-        </FadeIn>
+    <section id="gallery" className="snap-section gallery-section portfolio-section overflow-hidden bg-bone py-0 text-ink">
+      <div className="section-shell py-6 md:grid md:min-h-screen md:content-center md:py-0">
         <div className="grid grid-cols-3 gap-1 sm:gap-2 md:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[13vh]">
-          {galleryImages.map((image, index) => (
+          {displayedGalleryImages.map((image, index) => (
             <FadeIn key={image.src} delay={index * 0.018} className={image.className}>
               <button
                 type="button"
